@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
+import Topbar from './topbar/Topbar'
 
 function App() {
-  return <div>Hello Blog</div>
+  return (
+    <div>
+      <Topbar />
+    </div>
+  )
 }
 
 export default App
