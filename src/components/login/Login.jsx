@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import './login.css'
 
 const Login = () => {
@@ -21,7 +22,11 @@ const Login = () => {
         <label>Email</label>
         <button className='loginButton'>Login</button>
       </form>
-      <button className='loginRegisterButton'>Register</button>
+      <button className='loginRegisterButton'>
+        <Link className='link' to='/register'>
+          REGISTER
+        </Link>
+      </button>
     </div>
   )
 }
