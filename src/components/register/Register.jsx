@@ -19,7 +19,9 @@ const Register = () => {
         email,
         password,
       })
-      res.data && window.location.replace('/login')
+      const resData = res.data
+      if (resData.status) window.location.replace('/login')
+      else setError('User already exist')
     } catch (error) {
       setError(true)
     }
@@ -54,8 +56,8 @@ const Register = () => {
           Register
         </button>
         {error && (
-          <span style={{ color: 'red', marginTop: '10px' }}>
-            Something went wrong!
+          <span style={{ color: 'red', marginTop: '10px', marginLeft: '30px' }}>
+            {error}
           </span>
         )}
       </form>
