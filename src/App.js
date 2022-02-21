@@ -9,9 +9,11 @@ import Home from './components/pages/home/Home'
 
 import Topbar from './components/topbar/Topbar'
 import Login from './components/login/Login'
+import { useContext } from 'react'
+import { Context } from './context/Context'
 
 function App() {
-  const user = false
+  const { user } = useContext(Context)
   return (
     <Router>
       <Topbar />
